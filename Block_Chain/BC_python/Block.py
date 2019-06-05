@@ -28,7 +28,7 @@ def brick():
 
         dict = {
             "previous": "0",
-            "time" : "1", #time.time(),
+            "time" : datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'),
             "body" : body_encrypt()
 
         }
@@ -52,7 +52,7 @@ def brick():
 
                 dict = {
                     "previous": last_hash,
-                    "time": "2", #time.time()
+                    "time" : datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'),
                     "body": body_encrypt()
                 }
 
